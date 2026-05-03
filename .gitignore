@@ -1,0 +1,6 @@
+# Virtual environment
+Backend/venv/
+frontend/node_modules/
+
+# Zip files
+*.zip
