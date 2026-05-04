@@ -82,7 +82,7 @@ const Results = () => {
   useEffect(() => {
     const fetchAll = async () => {
       try {
-        const res = await axios.get("http://localhost:5020/compare");
+        const res = await axios.get("https://bot-iot-backend.onrender.com//compare");
         setCompare(res.data);
 
         // Determine best model by accuracy

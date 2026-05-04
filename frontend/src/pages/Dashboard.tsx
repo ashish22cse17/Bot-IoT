@@ -280,7 +280,7 @@ const Dashboard = () => {
     setManualInput({ protocol: "TCP" });
     setErrors({});
 
-    fetch(`http://localhost:5020/models/${selectedModel}/features`)
+    fetch(`https://bot-iot-backend.onrender.com//models/${selectedModel}/features`)
       .then((r) => {
         if (!r.ok) throw new Error("Failed");
         return r.json();
@@ -355,7 +355,7 @@ const Dashboard = () => {
       const form = new FormData();
       form.append("file", file);
       form.append("model", selectedModel);
-      const res = await fetch("http://localhost:5020/upload", {
+      const res = await fetch("https://bot-iot-backend.onrender.com//upload", {
         method: "POST",
         body: form,
       });

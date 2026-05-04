@@ -32,7 +32,7 @@ const Deployment = () => {
     setErrors({});
     setApiError(null);
 
-    fetch(`http://localhost:5020/models/${selectedModel}/features`)
+    fetch(`https://bot-iot-backend.onrender.com//models/${selectedModel}/features`)
       .then(r => {
         if (!r.ok) throw new Error('Failed to load features');
         return r.json();

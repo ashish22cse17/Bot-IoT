@@ -102,7 +102,7 @@ export async function predict(request: PredictionRequest): Promise<PredictionRes
   const payload = { model: request.model, ...processedFeatures };
   console.debug('PREDICT PAYLOAD:', payload);
 
-  const response = await fetch('http://localhost:5020/predict', {
+  const response = await fetch('https://bot-iot-backend.onrender.com//predict', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
