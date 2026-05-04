@@ -5,3 +5,4 @@ pandas
 joblib
 numpy
 tensorflow
+gunicorn -w 1 -b 0.0.0.0:5020 app:app
